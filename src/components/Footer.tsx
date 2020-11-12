@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Header() {
+function Footer() {
   return (
     <footer>
-      <div >
-        <a href="/" >conduit</a>
-        <span>
+      <div className="container">
+        <a href="/" className="logo-font">conduit</a>
+        <span className="attribution">
           An interactive learning project from <a href="https://thinkster.io">Thinkster</a>. Code &amp; design licensed under MIT.
         </span>
       </div>
@@ -13,4 +13,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Footer;
