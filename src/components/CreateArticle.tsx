@@ -17,7 +17,7 @@ function CreateArticle() {
                 <input type="text" className="form-control" placeholder="What's this article about?" />
             </fieldset>
             <fieldset className="form-group">
-                <textarea className="form-control" rows="8" placeholder="Write your article (in markdown)"></textarea>
+                <textarea className="form-control" /* rows="8" */ placeholder="Write your article (in markdown)"></textarea>
             </fieldset>
             <fieldset className="form-group">
                 <input type="text" className="form-control" placeholder="Enter tags" /><div className="tag-list"></div>
