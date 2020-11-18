@@ -12,21 +12,16 @@ import Login from './components/Login';
 
 function App() {
   return (
-    <><Header />
+    <main><Header />
     <div>
     <Switch>
-      <Route path="/#/settings">
-        <Settings />
-      </Route>
-      <Route path="/#/register">
-        <Login />
-      </Route>
-      <Route path="/#/">
-        <Home />
-      </Route>
+      <Route path="/#/" component={Home} exact />
+      <Route path="/#/settings" component={Settings} />
+      <Route path="/#/register" component={Login} />
+      <Route>Oops, looks like you got lost.</Route>
     </Switch>
   </div>
-  <Footer /></>
+  <Footer /></main>
   );
 }
 
