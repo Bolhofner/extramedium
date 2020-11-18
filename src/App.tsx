@@ -8,6 +8,7 @@ import Settings from './components/Settings';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './components/Login';
+import Article from './components/Article';
 
 
 function App() {
@@ -15,9 +16,10 @@ function App() {
     <main><Header />
     <div>
     <Switch>
-      <Route path="/#/" component={Home} exact />
-      <Route path="/#/settings" component={Settings} />
-      <Route path="/#/register" component={Login} />
+      <Route path="/#/" exact ><Home /></Route>
+      <Route path="/#/settings" ><Settings /></Route>
+      <Route path="/#/article" ><Article /></Route>
+      <Route path="/#/register" ><Login /></Route>
       <Route>Oops, looks like you got lost.</Route>
     </Switch>
   </div>

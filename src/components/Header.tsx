@@ -1,31 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/esm/Container';
+import Nav from 'react-bootstrap/esm/Nav';
+import Navbar from 'react-bootstrap/esm/Navbar';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
-      <nav className="navbar navbar-light">
-        <div className="container">
-          <Link className="navbar-brand" to="/#/">conduit</Link>
-          <ul className="nav navbar-nav pull-xs-right">
-            <li className="nav-item">
-              <Link className="nav-link" to="/#/">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="">
+      <Navbar >
+        <Container>
+          <Navbar.Brand href="/#/">conduit</Navbar.Brand>
+          <Nav className="nav navbar-nav pull-xs-right">
+            <Nav.Item className="nav-item">
+              <NavLink className="nav-link" to="/#/">Home</NavLink>
+            </Nav.Item>
+            <Nav.Item className="nav-item">
+              <NavLink className="nav-link" to="/#/article">
                 <i className="ion-compose"></i>&nbsp;New Post
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/#/settings">
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item className="nav-item">
+              <NavLink className="nav-link" to="/#/settings">
                 <i className="ion-gear-a"></i>&nbsp;Settings
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/#/register">Sign up</Link>
-            </li>
-          </ul>
-        </div>
-    </nav>
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item className="nav-item">
+              <NavLink className="nav-link" to="/#/register">Sign up</NavLink>
+            </Nav.Item>
+          </Nav>
+        </Container>
+    </Navbar>
   );
 }
 
