@@ -18,7 +18,7 @@ function Settings() {
                 <input className="form-control form-control-lg" type="text" placeholder="Your Name" />
               </fieldset>
               <fieldset className="form-group">
-                <textarea className="form-control form-control-lg" rows="8" placeholder="Short bio about you"></textarea>
+                <textarea className="form-control form-control-lg" rows={8} placeholder="Short bio about you"></textarea>
               </fieldset>
               <fieldset className="form-group">
                 <input className="form-control form-control-lg" type="text" placeholder="Email" />

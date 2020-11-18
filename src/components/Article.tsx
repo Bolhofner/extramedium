@@ -73,7 +73,7 @@ function Article() {
 
       <form className="card comment-form">
         <div className="card-block">
-          <textarea className="form-control" placeholder="Write a comment..." rows="3"></textarea>
+          <textarea className="form-control" placeholder="Write a comment..." rows={3}></textarea>
         </div>
         <div className="card-footer">
           <img src="http://i.imgur.com/Qr71crq.jpg" className="comment-author-img" />
