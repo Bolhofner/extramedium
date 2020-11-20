@@ -1,29 +1,36 @@
-import React from 'react';
-import {
-  Switch,
-  Route,
-} from "react-router-dom";
-import Home from './components/Home';
-import Settings from './components/Settings';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Login from './components/Login';
-import Article from './components/Article';
+import React from "react";
+import { Switch, Route, HashRouter as Router } from "react-router-dom";
 
+import Article from "./pages/Article";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Settings from "./pages/Settings";
+
+const RouteContext = React.createContext("/");
 
 function App() {
   return (
-    <main><Header />
-    <div>
-    <Switch>
-      <Route path="/#/" exact ><Home /></Route>
-      <Route path="/#/settings" ><Settings /></Route>
-      <Route path="/#/article" ><Article /></Route>
-      <Route path="/#/register" ><Login /></Route>
-      <Route>Oops, looks like you got lost.</Route>
-    </Switch>
-  </div>
-  <Footer /></main>
+    <>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/settings">
+              <Settings />
+            </Route>
+            <Route path="/article">
+              <Article />
+            </Route>
+            <Route path="/register">
+              <Login />
+            </Route>
+            <Route>Oops, looks like you got lost.</Route>
+          </Switch>
+        </div>
+      </Router>
+    </>
   );
 }
 

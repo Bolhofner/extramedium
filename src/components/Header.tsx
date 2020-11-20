@@ -8,23 +8,23 @@ function Header() {
   return (
       <Navbar >
         <Container>
-          <Navbar.Brand href="/#/">conduit</Navbar.Brand>
+          <Navbar.Brand href="/">conduit</Navbar.Brand>
           <Nav className="nav navbar-nav pull-xs-right">
             <Nav.Item className="nav-item">
-              <NavLink className="nav-link" to="/#/">Home</NavLink>
+              <NavLink className="nav-link" to="/">Home</NavLink>
             </Nav.Item>
             <Nav.Item className="nav-item">
-              <NavLink className="nav-link" to="/#/article">
+              <NavLink className="nav-link" to="/article">
                 <i className="ion-compose"></i>&nbsp;New Post
               </NavLink>
             </Nav.Item>
             <Nav.Item className="nav-item">
-              <NavLink className="nav-link" to="/#/settings">
+              <NavLink className="nav-link" to="/settings">
                 <i className="ion-gear-a"></i>&nbsp;Settings
               </NavLink>
             </Nav.Item>
             <Nav.Item className="nav-item">
-              <NavLink className="nav-link" to="/#/register">Sign up</NavLink>
+              <NavLink className="nav-link" to="/register">Sign up</NavLink>
             </Nav.Item>
           </Nav>
         </Container>
