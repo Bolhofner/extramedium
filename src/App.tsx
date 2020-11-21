@@ -6,8 +6,6 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Settings from "./pages/Settings";
 
-const RouteContext = React.createContext("/");
-
 function App() {
   return (
     <>
