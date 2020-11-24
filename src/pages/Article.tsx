@@ -1,6 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
+import CommentForm from "../components/CommentForm";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
+import AuthorButtons from "../components/AuthorButtons";
 
 function Article() {
   return (
@@ -11,26 +13,7 @@ function Article() {
           <div className="container">
             <h1>How to build webapps that scale</h1>
 
-            <div className="article-meta">
-              <a href="">
-                <img src="http://i.imgur.com/Qr71crq.jpg" />
-              </a>
-              <div className="info">
-                <a href="" className="author">
-                  Eric Simons
-                </a>
-                <span className="date">January 20th</span>
-              </div>
-              <button className="btn btn-sm btn-outline-secondary">
-                <i className="ion-plus-round"></i>
-                &nbsp; Follow Eric Simons <span className="counter">(10)</span>
-              </button>
-              &nbsp;&nbsp;
-              <button className="btn btn-sm btn-outline-primary">
-                <i className="ion-heart"></i>
-                &nbsp; Favorite Post <span className="counter">(29)</span>
-              </button>
-            </div>
+            <AuthorButtons />
           </div>
         </div>
 
@@ -51,48 +34,12 @@ function Article() {
           <hr />
 
           <div className="article-actions">
-            <div className="article-meta">
-              <a href="profile.html">
-                <img src="http://i.imgur.com/Qr71crq.jpg" />
-              </a>
-              <div className="info">
-                <a href="" className="author">
-                  Eric Simons
-                </a>
-                <span className="date">January 20th</span>
-              </div>
-              <button className="btn btn-sm btn-outline-secondary">
-                <i className="ion-plus-round"></i>
-                &nbsp; Follow Eric Simons <span className="counter">(10)</span>
-              </button>
-              &nbsp;
-              <button className="btn btn-sm btn-outline-primary">
-                <i className="ion-heart"></i>
-                &nbsp; Favorite Post <span className="counter">(29)</span>
-              </button>
-            </div>
+            <AuthorButtons />
           </div>
 
           <div className="row">
             <div className="col-xs-12 col-md-8 offset-md-2">
-              <form className="card comment-form">
-                <div className="card-block">
-                  <textarea
-                    className="form-control"
-                    placeholder="Write a comment..."
-                    rows={3}
-                  ></textarea>
-                </div>
-                <div className="card-footer">
-                  <img
-                    src="http://i.imgur.com/Qr71crq.jpg"
-                    className="comment-author-img"
-                  />
-                  <button className="btn btn-sm btn-primary">
-                    Post Comment
-                  </button>
-                </div>
-              </form>
+              <CommentForm />
 
               <div className="card">
                 <div className="card-block">
