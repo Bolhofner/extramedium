@@ -1,11 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 function Article() {
   return (
     <>
-      <Header />
       <div className="article-page">
         <div className="banner">
           <div className="container">
@@ -80,8 +77,7 @@ function Article() {
                   <textarea
                     className="form-control"
                     placeholder="Write a comment..."
-                    rows={3}
-                  ></textarea>
+                    rows={3}></textarea>
                 </div>
                 <div className="card-footer">
                   <img
@@ -145,7 +141,6 @@ function Article() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

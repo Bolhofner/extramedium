@@ -1,11 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 function Profile() {
   return (
     <>
-      <Header />
       <div className="profile-page">
         <div className="user-info">
           <div className="container">
@@ -101,7 +98,6 @@ function Profile() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
