@@ -1,11 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 function CreateArticle() {
   return (
     <>
-      <Header />
       <div className="editor-page">
         <div className="container page">
           <div className="row">
@@ -30,8 +27,7 @@ function CreateArticle() {
                     <textarea
                       className="form-control"
                       rows={8}
-                      placeholder="Write your article (in markdown)"
-                    ></textarea>
+                      placeholder="Write your article (in markdown)"></textarea>
                   </fieldset>
                   <fieldset className="form-group">
                     <input
@@ -43,8 +39,7 @@ function CreateArticle() {
                   </fieldset>
                   <button
                     className="btn btn-lg pull-xs-right btn-primary"
-                    type="button"
-                  >
+                    type="button">
                     Publish Article
                   </button>
                 </fieldset>
@@ -53,7 +48,6 @@ function CreateArticle() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

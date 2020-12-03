@@ -1,13 +1,10 @@
 import React from "react";
 import CommentForm from "../components/CommentForm";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import AuthorButtons from "../components/AuthorButtons";
 
 function Article() {
   return (
     <>
-      <Header />
       <div className="article-page">
         <div className="banner">
           <div className="container">
@@ -92,7 +89,6 @@ function Article() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
