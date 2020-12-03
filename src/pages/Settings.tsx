@@ -1,11 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 function Settings() {
   return (
     <>
-      <Header />
       <div className="settings-page">
         <div className="container page">
           <div className="row">
@@ -32,8 +29,7 @@ function Settings() {
                     <textarea
                       className="form-control form-control-lg"
                       rows={8}
-                      placeholder="Short bio about you"
-                    ></textarea>
+                      placeholder="Short bio about you"></textarea>
                   </fieldset>
                   <fieldset className="form-group">
                     <input
@@ -58,7 +54,6 @@ function Settings() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

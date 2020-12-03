@@ -5,11 +5,14 @@ import Article from "./pages/Article";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Settings from "./pages/Settings";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Router>
+        <Header />
         <div>
           <Switch>
             <Route path="/" exact>
@@ -27,6 +30,7 @@ function App() {
             <Route>Oops, looks like you got lost.</Route>
           </Switch>
         </div>
+        <Footer />
       </Router>
     </>
   );
