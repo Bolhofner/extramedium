@@ -10,6 +10,7 @@ function readableDate(str: string) {
   return month + " " + day + ", " + year;
 }
 
+
 function ArticlePreview(a: Article) {
   return (
     <div className="article-preview">
