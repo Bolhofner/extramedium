@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Footer() {
   return (
     <footer>
       <div className="container">
-        <a href="/" className="logo-font">conduit</a>
+        <NavLink to="/" className="logo-font">conduit</NavLink>
         <span className="attribution">
           An interactive learning project from <a href="https://thinkster.io">Thinkster</a>. Code &amp; design licensed under MIT.
         </span>
