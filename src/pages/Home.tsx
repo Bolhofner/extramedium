@@ -1,24 +1,33 @@
 import React from "react";
-import Banner from "../components/Banner";
 import ArticlePreview from "../components/ArticlePreview";
+import Banner from "../components/Banner";
 import useFetch from "../services/useFetch";
 
+function renderArticlePreview(a: Article) {
+  return <ArticlePreview {...a} />;
+}
 
-function renderArticlePreview() {
+function renderTags(t: string) {
   return (
-      <ArticlePreview />
-  )
+    <a href="" className="tag-pill tag-default">
+      {t}
+    </a>
+  );
 }
 
 function Home() {
-  const articlesResponse = useFetch<ArticleResponse>("articles")
-  const filterWord = "word"
+  const articlesResponse = useFetch<ArticleResponse>("articles");
+  const tagsResponse = useFetch<TagsResponse>("tags");
+  const filterWord = "word";
 
   const articles = articlesResponse?.articles;
 
   const filteredArticles = filterWord
-    ? articles?.filter((a: { title: string; }) => a.title != filterWord)
+    ? articles?.filter((a: { title: string }) => a.title != filterWord)
     : articles;
+
+  const tags = tagsResponse?.tags;
+  const tagsToRender = tags?.slice(0, 20);
 
   return (
     <>
@@ -43,39 +52,16 @@ function Home() {
                 </ul>
               </div>
 
-              <section id="articles">{filteredArticles?.map(renderArticlePreview)}</section>
+              <section id="articles">
+                {filteredArticles?.map(renderArticlePreview)}
+              </section>
             </div>
 
             <div className="col-md-3">
               <div className="sidebar">
                 <p>Popular Tags</p>
 
-                <div className="tag-list">
-                  <a href="" className="tag-pill tag-default">
-                    programming
-                  </a>
-                  <a href="" className="tag-pill tag-default">
-                    javascript
-                  </a>
-                  <a href="" className="tag-pill tag-default">
-                    emberjs
-                  </a>
-                  <a href="" className="tag-pill tag-default">
-                    angularjs
-                  </a>
-                  <a href="" className="tag-pill tag-default">
-                    react
-                  </a>
-                  <a href="" className="tag-pill tag-default">
-                    mean
-                  </a>
-                  <a href="" className="tag-pill tag-default">
-                    node
-                  </a>
-                  <a href="" className="tag-pill tag-default">
-                    rails
-                  </a>
-                </div>
+                <div className="tag-list">{tagsToRender?.map(renderTags)}</div>
               </div>
             </div>
           </div>
@@ -94,26 +80,30 @@ export default Home;
 // }
 
 type ArticleResponse = {
-  articles: Array<Article>
-  articlesCount: number
+  articles: Array<Article>;
+  articlesCount: number;
 };
 
-type Article = {
-  title: string,
-  slug: string,
-  body: string,
-  createdAt: string,
-  updatedAt: string,
-  tagList: Array<string>,
-  description: string,
-  author: Author,
-  favorited: boolean,
-  favoritesCount: number
-}
+export type Article = {
+  title: string;
+  slug: string;
+  body: string;
+  createdAt: string;
+  updatedAt: string;
+  tagList: Array<string>;
+  description: string;
+  author: Author;
+  favorited: boolean;
+  favoritesCount: number;
+};
 
 type Author = {
-  username: string,
-  bio: string,
-  image: string,
-  following: boolean,
-}
+  username: string;
+  bio: string;
+  image: string;
+  following: boolean;
+};
+
+type TagsResponse = {
+  tags: Array<string>;
+};
