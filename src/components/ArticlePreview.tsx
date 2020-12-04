@@ -1,12 +1,6 @@
 import React from "react";
 import type { Article } from "../pages/Home";
 
-function truncateString(str: string, num: number) {
-  if (str.length <= num) {
-    return str;
-  }
-  return str.slice(0, num) + "...";
-}
 
 function readableDate(str: string) {
   const date = new Date(str);
@@ -36,7 +30,7 @@ function ArticlePreview(a: Article) {
       <a href="" className="preview-link">
         <h1>{a.title}</h1>
         <p>{a.description}</p>
-        <span>{truncateString(a.body, 50)}</span>
+        <span>Read more...</span>
       </a>
     </div>
   );
